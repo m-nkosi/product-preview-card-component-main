@@ -1,0 +1,38 @@
+body{
+    margin:0;
+}
+.container {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100dvh;
+}
+#main {
+    min-width: 500px;
+    height: 100px;
+    flex-basis: 70dvh;
+    align-self:center;
+    display: flex;
+
+}
+#image {
+    min-width: 50%;
+    height: 100%;
+    background-image:url("../images/image-product-desktop.jpg");
+    background-size: cover;
+}
+/* for device view */
+@media (min-width:0px) and (max-width:500px)
+{  
+   #main {
+        min-width: 90%;
+        flex-basis: 90dvh;
+        flex-direction: column;
+
+   }
+   #image {
+        height: 40%;
+        background-image: url("../images/image-product-mobile.jpg");
+   }
+
+}
