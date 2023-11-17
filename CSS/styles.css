@@ -9,18 +9,24 @@ body{
     height: 100dvh;
     display: flex;
     justify-content: center;
+    
 }
 #main {
     height: 70dvh;
     width: 45%;
+    min-height: 400px;
     min-width: 500px;
     align-self:center;
+    border-radius: 10px;
     display: flex;
     background-color: white;
 
 }
 #image {
     flex-grow: 1;
+    min-width: 50%;
+    border-radius: 10px 0 0 10px;
+    /* width:100px; */
     height: 100%;
     background-image:url("../images/image-product-desktop.jpg");
     background-size: cover;
@@ -28,6 +34,7 @@ body{
 }
 #content {
     flex-grow: 1;
+    padding:1.8vw;   
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -38,39 +45,45 @@ h3 {
     margin:0;
     color:hsl(228, 12%, 48%);
     font-weight: 500;
-    font-size: 10.85vw;
-    letter-spacing: 0.4rem;
+    font-size: 0.9rem;
+    letter-spacing: 0.3rem;
 }
 h1 {
     font-family: 'Fraunces', serif;
     margin:0;
     color:hsl(212, 21%, 14%);
-    font-size: 9vw;
+    font-size: 2.6rem;
     font-weight: 700;
     line-height: 1  ;
 }
 p {
     font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
     margin:0;
-    font-size:3.85vw;
-    line-height: 1.8;
+    font-size: 1.05rem;
+    color:hsl(228, 12%, 48%);
+    line-height: 1.6;
 }
 #mainPrice {
     font-family: 'Fraunces', serif;
-    font-size:9vw;
+    font-size: 2.5rem;
+    color:hsl(158, 36%, 37%);
 }
 #price {
     display: flex;
-    color:hsl(158, 36%, 37%);
+    
 }
+button > span {
+    margin-left: 10px;
+   }
 #cancelledPrice {
     font-family: 'Montserrat', sans-serif;
-
+    align-self: center;
+    color:hsl(228, 12%, 48%);
+    margin-left:10px;
 }
 /* END OF TEXT  */
-#cancelledPrice > div {
-    align-self: center;
-}
+
 button {
     width:100%;
     background-color:hsl(158, 36%, 37%);
@@ -78,6 +91,12 @@ button {
     border-radius: 5px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
+    color:hsl(0, 0%, 100%);
+    padding:15px;
+}
+button:hover {
+    cursor: pointer;
+    background-color: hsl(158, 36%, 15%);
 }
 /* for device view */
 @media (min-width:0px) and (max-width:500px)
@@ -107,20 +126,26 @@ button {
    button {
     padding: 15px;
     border-radius: 10px;
-    color:hsl(0, 0%, 100%);
 
    }
    #mainPrice {
     font-size:2rem;
    }
    #cancelledPrice {
-    align-self: center;
+    
     margin-left:20px;
+   }
+   h1 {
+    font-size: 9vw;
    }
    h3 {
     font-size: 0.7rem;
+    letter-spacing: 0.4rem;
    }
-   button > span {
-    margin-left: 10px;
+   p {
+    font-size:3.85vw;
+    line-height: 1.8;
    }
+
+   
 }
