@@ -1,38 +1,49 @@
 body{
     margin:0;
 }
-.container {
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
+#container {
     height: 100dvh;
+    display: flex;
+    justify-content: center;
 }
 #main {
+    height: 70dvh;
+    width: 45%;
     min-width: 500px;
-    height: 100px;
-    flex-basis: 70dvh;
     align-self:center;
     display: flex;
 
 }
 #image {
-    min-width: 50%;
+    flex-grow: 1;
     height: 100%;
     background-image:url("../images/image-product-desktop.jpg");
     background-size: cover;
 }
+#content {
+    flex-grow: 1;
+}
 /* for device view */
 @media (min-width:0px) and (max-width:500px)
 {  
-   #main {
-        min-width: 90%;
-        flex-basis: 90dvh;
+    #container {
         flex-direction: column;
-
+    }
+    #main {
+        /* height:95dvh; */
+        min-width: 92%;
+        height: 93dvh;
+        flex-direction: column;
    }
    #image {
-        height: 40%;
+        flex-grow:3;
         background-image: url("../images/image-product-mobile.jpg");
+        width: 100%;
+        height: auto;
+        min-width: none;
    }
-
+   #content {
+        flex-grow: 4;
+   }
+   
 }
