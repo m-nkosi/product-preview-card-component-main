@@ -93,10 +93,16 @@ button {
     font-weight: 700;
     color:hsl(0, 0%, 100%);
     padding:15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 button:hover {
     cursor: pointer;
     background-color: hsl(158, 36%, 15%);
+}
+#addToCart {
+    margin-left:10px;
 }
 /* for device view */
 @media (min-width:0px) and (max-width:500px)
@@ -143,9 +149,7 @@ button:hover {
     letter-spacing: 0.4rem;
    }
    p {
-    font-size:3.85vw;
+    font-size:1.25rem;
     line-height: 1.8;
    }
-
-   
 }
